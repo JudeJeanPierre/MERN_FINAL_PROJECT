@@ -16,6 +16,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ShippingPage from './pages/ShippingPage';
+import SignUpPage from './pages/SignUpPage';
+import AboutPage from './pages/AboutPage';
 
 
 function App() {
@@ -38,6 +40,11 @@ function App() {
                 <Navbar.Brand><strong>HAITIPROD MART</strong></Navbar.Brand>
               </LinkContainer>
               <Nav className="nav-cart">
+
+              <Link to="/about" className="about-us">
+                  About us  &nbsp; &nbsp; &nbsp; 
+                </Link>
+
                 {userInfo ? (
                   <NavDropdown title={userInfo.name} id="nav-dropdown">
                     <LinkContainer to="/profile">
@@ -77,8 +84,10 @@ function App() {
             <Routes>
               <Route path='/prod/:refs' element={<ProductPage />} />
               <Route path='/' element={<Home />} />
+              <Route path='/about' element={<AboutPage />} />
               <Route path='/cart' element={<CartPage />} />
               <Route path='/signin' element={<SignInPage />} />
+              <Route path='/signup' element={<SignUpPage />} />
               <Route path='/shipping' element={<ShippingPage />} />
 
             </Routes>

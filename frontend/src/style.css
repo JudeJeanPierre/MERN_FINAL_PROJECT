@@ -94,3 +94,53 @@ main{
   border-bottom: 0.3rem solid orangered;
   color: orangered;
 }
+
+
+.aboutContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.about{
+  margin-left: 3.5%;
+  padding: 1%;
+}
+.about-text {
+  width: 45%;
+  height: 75vh;
+  /* border: 1px solid red; */
+  color: blue;
+  margin: .4rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: justify;
+  text-decoration: dotted;
+  font-style: italic;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 3px 13px 10px -7px rgba(1, 1, 1, 0.3);
+  padding: 1%;
+}
+h3{
+  color: red;
+}
+.about-text:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+}
+.about-image {
+  background-image: url("https://i.etsystatic.com/14346102/r/il/af46e6/3521506518/il_340x270.3521506518_mg2p.jpg");
+  background-size: cover;
+  width: 50%;
+  height: 75vh;
+  /* border: 1px solid red; */
+  margin: .5rem;
+  position: relative;
+  overflow: hidden;
+  padding: 1%;
+}
+
+.category-nav{
+  height: 15vh;
+  border: solid blue;
+}

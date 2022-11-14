@@ -18,7 +18,7 @@ dotenv.config();
 // })
 
 // Create a variable that represent our database
-mongoose.connect(process.env.MONGODB_URI).then( () =>{
+mongoose.connect(process.env.MONGODB_URI).then( "open", () =>{
     console.log('DB connection successful');
 })
 .catch((err) =>{
