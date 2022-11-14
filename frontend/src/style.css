@@ -6,7 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.nav-cart a{
+text-decoration: none;
+font-weight: bold;
+}
 .webpage-container{
   min-height: 100vh;
 }
@@ -17,7 +20,7 @@ code {
 }
 
 .color-nav{
-  background-color: darkred;
+  background-color: brown;
 }
 
 /* .App-header{
@@ -51,7 +54,7 @@ main{
 }
   .prod{
     width: 220px;
-    border: 1px blue solid;
+    border: 1px lightgrey solid;
     margin: 0;
   }
 
@@ -72,10 +75,22 @@ main{
 .rating span{
   color: grey;
 }
+.small-container{
+  max-width: 580px;
+}
 .signin-container{
   max-width: 580px;
 }
 
 .prod-page-img{
   max-width: 100%;
+}
+
+.steps-checkout > div{
+  border-bottom: .3rem solid grey;
+  color: grey
+}
+.checkout-steps > div.active {
+  border-bottom: 0.3rem solid orangered;
+  color: orangered;
 }

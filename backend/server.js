@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import seedRouter from "./routes/seedRoutes.js";
 import prodRouter from "./routes/ProdRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 
 
 dotenv.config();
@@ -25,10 +26,17 @@ mongoose.connect(process.env.MONGODB_URI).then( () =>{
 });
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 // PARSER
 app.use('/api/seed', seedRouter);
 app.use('/api/prods', prodRouter);
+app.use('/api/users', userRouter);
+
+app.use((err, req, res, next) =>{
+    res.status(500).send({message: err.message});
+});
 
 // app.get('/api/prods', (req, res) =>{
 //     res.send(data.prods);
