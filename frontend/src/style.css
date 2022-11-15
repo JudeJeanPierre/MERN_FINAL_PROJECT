@@ -9,6 +9,7 @@ body {
 .nav-cart a{
 text-decoration: none;
 font-weight: bold;
+color: darkgrey;
 }
 .webpage-container{
   min-height: 100vh;
@@ -20,7 +21,7 @@ code {
 }
 
 .color-nav{
-  background-color: brown;
+  background-color: darkmagenta;
 }
 
 /* .App-header{
@@ -129,7 +130,7 @@ h3{
   transform: scale(1.05, 1.05);
 }
 .about-image {
-  background-image: url("https://i.etsystatic.com/14346102/r/il/af46e6/3521506518/il_340x270.3521506518_mg2p.jpg");
+  background-image: url("http://legacy.travelnoire.com/wp-content/uploads/2021/03/020A4260.jpg");
   background-size: cover;
   width: 50%;
   height: 75vh;
@@ -140,7 +141,138 @@ h3{
   padding: 1%;
 }
 
-.category-nav{
-  height: 15vh;
-  border: solid blue;
+
+/* sidebar */
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: lightgray;
+  transition: 0.5s;
+}
+
+.site-container {
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
+}
+
+.category-nav {
+  padding-left: 5%;
+  padding-right: 7%;
+  height: 26vh;
+  border: solid lightgrey;
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-between;
+}
+
+.category-nav a{
+text-decoration: none;
+  }
+
+.nav-text{
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  
+}
+.food{
+background-image: url("https://i.etsystatic.com/25275329/r/il/56cf47/2794632527/il_680x540.2794632527_rdj0.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+border: 1rem solid blue;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+margin-top: 5px;
+font-weight: bold;
+position: relative;
+overflow: hidden;
+border: none;
+text-align: center;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+
+} 
+.oil{
+  background-image: url("https://i.etsystatic.com/24878881/r/il/db85ad/3297409682/il_340x270.3297409682_cntd.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* border: 1rem solid blue; */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+.spices{
+  background-image: url("https://i.etsystatic.com/23517904/r/il/873e5a/3231971377/il_680x540.3231971377_stc9.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* border: 1rem solid blue; */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+} 
+.jewelry{
+  background-image: url("https://i.etsystatic.com/18278392/r/il/edac0e/1967667859/il_680x540.1967667859_ch1k.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* border: 1rem solid blue; */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+.art{
+  background-image: url("https://i.etsystatic.com/24344910/c/2118/1691/436/54/il/ffc5f7/3502897981/il_340x270.3502897981_cu1f.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* border: 1rem solid blue; */
+  border-radius: 50%;
+  width: 100px;
+height: 100px;
+  margin-top: 5px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+.btn-outline-primary{
+  background-color: salmon;
+  border: solid burlywood ;
+  color: white;
 }

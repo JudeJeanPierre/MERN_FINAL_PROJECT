@@ -4,7 +4,7 @@ import axios from 'axios';
 import logger from 'use-reducer-logger';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
-import SingleProduct from "../components/SingleProduct";
+import Product from "../components/Product";
 import {Helmet} from 'react-helmet-async';
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
@@ -45,6 +45,9 @@ function Home() {
             <Helmet>
                 <title>HAITIPROD MART</title>
             </Helmet>
+            {/* <div className="category-nav">
+                <h3>FOOD</h3>
+            </div> */}
             <h1>Featured Products</h1>
             <div className="prods">
                 {loading ? (
@@ -55,7 +58,7 @@ function Home() {
                     <Row>
                 {prods.map((prod) => (
                     <Col key={prod.refs} sm={6} md={4} lg={3} className="mb-3">
-                    <SingleProduct prod={prod}></SingleProduct>
+                    <Product prod={prod}></Product>
                     </Col>
                 ))}
                 </Row>

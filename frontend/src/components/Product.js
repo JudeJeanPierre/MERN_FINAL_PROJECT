@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 import Rating from './Rating';
 import axios from 'axios';
 import { Store } from '../Parent';
-import ProductPage from '../pages/ProductPage';
 
 
-function SingleProduct({ prod }) {
+function Product({ prod }) {
 
   const { state, dispatch: contextDispatch } = useContext(Store);
   const {
@@ -44,12 +43,12 @@ function SingleProduct({ prod }) {
         <Card.Text>
           <p><strong>${prod.price}</strong></p>
         </Card.Text>
-        {ProductPage.inStock === 0 ? (<Button variant="light" disabled> Out of stock</Button>
-         ) : ( 
-         <Button onClick={() => add2CartHandler(prod)} className="add2cartButton">Add to cart</Button>)}
+        {prod.inStock === 0 ? (<Button variant="light" disabled> Out of stock</Button>
+        ) : (
+          <Button onClick={() => add2CartHandler(prod)} className="add2cartButton">Add to cart</Button>)}
       </Card.Body>
     </Card>
   );
 }
 
-export default SingleProduct
+export default Product;

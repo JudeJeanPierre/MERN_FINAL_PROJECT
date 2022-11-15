@@ -10,7 +10,12 @@ export default function SearchBox() {
   const [query, setQuery] = useState('');
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate(query ? `/search/?query=${query}` : '/search');
+    // navigate(`${query} ? '/search/?query=${query}' : '/search'`);
+    if (query){
+      navigate(`search/?query=${query}`)
+    }else{
+      navigate('/search')
+    }
   };
 
   return (
@@ -21,8 +26,8 @@ export default function SearchBox() {
           name="q"
           id="q"
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="search products..."
-          aria-label="Search Products"
+          placeholder="Search for a product"
+          aria-label="search for products"
           aria-describedby="button-search"
         ></FormControl>
         <Button variant="outline-primary" type="submit" id="button-search">

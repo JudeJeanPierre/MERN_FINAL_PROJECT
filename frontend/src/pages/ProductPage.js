@@ -49,7 +49,6 @@ export default function ProductPage() {
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
-      // setProds(result.data); 
     }
     fetchData();
   }, [refs])
@@ -93,7 +92,7 @@ export default function ProductPage() {
             <ListGroup.Item>
               <Rating
                 rating={prod.rating}
-                reviewsNum={ProductPage.reviewsNum}>
+                reviewsNum={prod.reviewsNum}>
               </Rating>
               <ListGroup.Item>Price: ${prod.price}</ListGroup.Item>
               <ListGroup.Item>Details: {prod.details}</ListGroup.Item>
